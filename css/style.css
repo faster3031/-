@@ -891,55 +891,38 @@ text-align: center;
     display: block;
   }
 }
-/* 안내창 */
-.modal-wrap {
-  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
-    "Apple SD Gothic Neo", sans-serif;
+/* 모달 안내창 */
+.modal-wrap{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 99999;
 }
 .modal-main{
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
+  transform: translate(-50%,-50%);
+  width: 600px;
   height: 400px;
   background-color: #fff;
-  border-radius: 30px;
-  text-align: center;
-  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* .modal-logo{
+.modal-close {
   position: absolute;
-  top: -50px;
-  left: 40%;
-  display: block;
-  background-color: #c3c3ce;
-  width: 100px;
-  border-radius: 50%;
-} */
-.modal-notice{
-  margin-top: 80px;
-  line-height: 50px;
-  font-weight: bold;
+  right: 10px;
+  bottom: 10px;
 }
-.modal-notice strong{
-  color: #ed1c24;
-  background: linear-gradient(to top, #ffe400 50%, transparent -50%);
+.fadeOut {
+  animation: fadeOut 0.3s forwards;
 }
-.modal-notice span{
-  font-size: 10px;
-  font-weight: 400;
-}
-.modal-close{
-line-height: 150px;
-font-weight: bold;
-}
-.modal-close i{
-  font-weight: 400;
+@keyframes fadeOut{
+  100%{
+    opacity: 0;
+  }
 }

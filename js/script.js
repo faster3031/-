@@ -188,12 +188,13 @@ window.onload = function () {
     },
     offset : "80%",
   })
-  // 안내창 스크립트 //
-    // 안내창 스크립트
-    let body = document.querySelector("body");
-    let modal = document.querySelector(".modal-wrap");
-    modal.addEventListener("click", function () {
-      modal.style.display = "none";
-      fadeOut(modal);
-    });
+  // 모달 창 스크립트
+    let modalWrap = document.querySelector(".modal-wrap");
+    let modalClose = document.querySelector(".modal-close");
+    modalClose.addEventListener("click", function(){
+      modalWrap.classList.add("fadeOut");
+      modalWrap.addEventListener("animationend", function(){
+        modalWrap.style.display = "none"
+      })
+    })
   };
